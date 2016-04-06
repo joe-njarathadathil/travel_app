@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Camping</title>
+    <!-- Custom styles -->
+    <link href="jumbotron.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Camping Hub</h1>
+        <p>Make your camping dreams come true. Use our hub to plan your vacation.</p>
+      </div>
+    </div>
+
+    <!-- start map -->
+    <div id= "mapArea" class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Step 1.</h2>
+          <p>Research destination and calculate your route.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Step 2</h2>
+          <p>Check the weather.</p>
+       </div>
+        <div class="col-md-4">
+          <h2>Step 3</h2>
+          <p>Pack up and go camping!</p>
+        </div>
+      </div>
+
+      <!-- Google Map code -->
+        <div class="route">
+        <h3>Calculate your route</h3>
+        <form id="calculate-route" name="calculate-route" action="#" method="get">
+          <label for="Origin">Origin:     </label>
+          <input type="text" id="from" name="from" required="required" placeholder="Origin" size="30" />
+          <a id="from-link" href="#">Where am I?</a>
+          <br />
+
+          <label for="Destination">Destination:</label>
+          <input type="text" id="to" name="to" required="required" placeholder="Destination" size="30" />
+          <!-- <a id="to-link" href="#">Get my position</a> -->
+          <br />
+
+          <input type="submit" class = "btn btn-primary"/>
+          <input type="reset" class = "btn btn-primary"/>
+        </form>
+        <div id="map"></div>
+        <p id="error"></p>
+      </div>
+    </div> <!-- end map  -->
+
+    <div id="userArea" class="container">
+      <div id="stateWrapper">
+        <label>Get the weather(weather is broken): </label>
+        <input type="text" id="cityInput" placeholder="Enter your destination" />
+      </div>
+      <br/>
+      <div id="buttonArea">
+        <input type="submit" id="submitWeather" class="btn btn-primary"/>
+        <br/>
+      </div>
+      <!-- USED TO SHOW RESULT  -->
+      <div id="weatherWrapper">
+      </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <link src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></script>
+  <script src="js/map.js"></script>
+</html>
